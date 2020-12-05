@@ -7,5 +7,6 @@ module.exports = {
                 path: `./cv`,
             },
         },
+	`gatsby-plugin-react-helmet`
     ],
 }

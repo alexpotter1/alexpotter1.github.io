@@ -169,7 +169,6 @@
   .photo {
       object-fit: contain;
       height: 125px;
-      opacity: 88%;
       border-radius: 50%;
   }
   

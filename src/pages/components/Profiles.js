@@ -2,7 +2,7 @@ import React from 'react';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
 
 const Profiles = ({profiles}) => {
-    if (profiles.length === 0) {
+    if (profiles?.length === 0 || profiles?.length === undefined) {
         return null;
     }
 

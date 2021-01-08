@@ -1,0 +1,35 @@
+{
+  "title": "compact-apotter",
+  "description": "A compact résumé theme for FluentCV. Modified by a",
+  "author": "hacksalot <hacksalot@indevious.com> (https://github.com/hacksalot)",
+  "engine": "handlebars",
+  "inherits": {
+    "txt": "basis",
+    "md": "basis"
+  },
+  "fonts": {
+    "all": {
+      "default": ["Helvetica Neue", "Helvetica", "Segoe UI", "sans-serif"],
+      "title": [ "Helvetica Neue" ],
+      "heading3": [ "Helvetica Neue" ]
+    },
+    "doc": {
+      "default": {
+        "name": "Helvetica Neue",
+        "size": 20
+      },
+      "heading1": {
+        "name": "Helvetica Neue",
+        "size": 20
+      },
+      "heading3": {
+        "name": "Helvetica Neue",
+        "size": 20
+      },
+      "title": {
+        "name": "Helvetica Neue",
+        "size": 20
+      }
+    }
+  }
+}

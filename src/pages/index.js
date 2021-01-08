@@ -12,9 +12,11 @@ import Publications from './components/Publications'
 import Skills from './components/Skills';
 import Languages from './components/Languages';
 import Interests from './components/Interests';
+import Footer from './components/Footer';
 
 const CV = ({ data }) => {
     const cv = data.cvJson;
+    const git = data.gitCommit;
     return (
         <>
             <Helmet>
@@ -36,6 +38,7 @@ const CV = ({ data }) => {
                 <Skills skills={cv.skills} />   
                 <Languages languages={cv.languages} />
                 <Interests interests={cv.interests} />
+                <Footer commit={git.hash} />
             </div>
         </>
     )
@@ -45,6 +48,9 @@ export default CV;
 
 export const query = graphql`
     query MyQuery {
+        gitCommit(latest: { eq: true }) {
+            hash
+        }
         cvJson {
             basics {
                 label

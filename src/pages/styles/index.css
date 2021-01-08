@@ -171,6 +171,12 @@
       height: 125px;
       border-radius: 50%;
   }
+
+  .cv-link {
+    grid-column: content;
+    font-size: large;
+    justify-self: center;
+  }
   
   .stack {
     display: grid;
@@ -295,6 +301,10 @@
     }
     .me-photo {
       display: none !important;
+    }
+
+    .cv-link {
+      grid-column: main !important;
     }
   }
   

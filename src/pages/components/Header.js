@@ -1,11 +1,13 @@
 import React from 'react';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
+import DownloadCV from './DownloadCV';
 
 const Header = (basics) => {
     return (
         <header className="masthead">
             <Me {...basics} />
             <Photo image_url={basics.image} />
+            <DownloadCV />
         </header>
     )
 }

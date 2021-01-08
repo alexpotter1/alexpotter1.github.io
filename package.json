@@ -20,7 +20,7 @@
     "clean": "rm -r cv/out && gatsby clean",
     "develop": "gatsby develop",
     "makepdf": "bash ./update-version.sh && cd cv && hackmyresume BUILD resume.json TO out/resume.pdf -t ./compact-apotter",
-    "deploy": "yarn makepdf && gatsby build && gh-pages -d public -b deploy"
+    "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"

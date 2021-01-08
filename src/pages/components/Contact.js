@@ -1,7 +1,7 @@
 import React from 'react';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
 
-const Contact = ({email, phone, url}) => {
+const Contact = ({email, phone, website}) => {
     let Email, Phone, URL = null;
     if (!isUndefinedOrEmpty(email)) {
         Email = <ContactLinkItem text='Email' value={email} isEmail={true} />;
@@ -9,8 +9,8 @@ const Contact = ({email, phone, url}) => {
     if (!isUndefinedOrEmpty(phone)) {
         Phone = <ContactItem text='Phone' value={phone} />;
     }
-    if (!isUndefinedOrEmpty(url)) {
-        URL = <ContactLinkItem text='Website' value={url} isEmail={false} />;
+    if (!isUndefinedOrEmpty(website)) {
+        URL = <ContactLinkItem text='Website' value={website} isEmail={false} />;
     }
 
     if (Email === null && Phone === null && URL === null) {

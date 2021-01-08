@@ -20,8 +20,8 @@ const Education = ({education}) => {
     )
 }
 
-const EducationItem = ({institution, icon, startDate, endDate, area, url, studyType, score, courses}) => {
-    if (isUndefinedOrEmpty(institution) || isUndefinedOrEmpty(area)) {
+const EducationItem = ({institution, icon, startDate, endDate, title, website, studyType, score, courses}) => {
+    if (isUndefinedOrEmpty(institution) || isUndefinedOrEmpty(title)) {
         return null;
     }
 
@@ -39,8 +39,8 @@ const EducationItem = ({institution, icon, startDate, endDate, area, url, studyT
                     </span>
                 </div>
                 <div className="spaced-list">
-                    <h5>{area}</h5>
-                    {!isUndefinedOrEmpty(url) ? <a href={url}>{url}</a> : null}
+                    <h5>{title}</h5>
+                    {!isUndefinedOrEmpty(website) ? <a href={website}>{website}</a> : null}
                 </div>
                 <div className="spaced-list">
                     <h6>{!isUndefinedOrEmpty(studyType) ? studyType : null}</h6>

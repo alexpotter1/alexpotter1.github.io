@@ -20,8 +20,8 @@ const Work = ({work}) => {
     )
 }
 
-const WorkItem = ({name, icon, startDate, endDate, position, url, summary, highlights}) => {
-    if (isUndefinedOrEmpty(name) || isUndefinedOrEmpty(position)) {
+const WorkItem = ({company, icon, startDate, endDate, position, website, summary, highlights}) => {
+    if (isUndefinedOrEmpty(company) || isUndefinedOrEmpty(position)) {
         return null;
     }
 
@@ -31,7 +31,7 @@ const WorkItem = ({name, icon, startDate, endDate, position, url, summary, highl
                 <div className="spaced-list">
                     <div className="institution-container">
                         {!isUndefinedOrEmpty(icon) ? <img src={icon} alt='institution icon' /> : null}
-                        <h4>{name}</h4>
+                        <h4>{company}</h4>
                     </div>
                     <span>
                         <time dateTime={startDate}>{moment(startDate).format(timeFormat)}</time> -
@@ -40,7 +40,7 @@ const WorkItem = ({name, icon, startDate, endDate, position, url, summary, highl
                 </div>
                 <div className="spaced-list">
                     <strong>{position}</strong>
-                    {!isUndefinedOrEmpty(url) ? <a href={url}>{url}</a> : null}
+                    {!isUndefinedOrEmpty(website) ? <a href={website}>{website}</a> : null}
                 </div>
                 {!isUndefinedOrEmpty(summary) ? summary : null}
             </header>

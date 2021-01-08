@@ -27,7 +27,7 @@ const CV = ({ data }) => {
             <div className="resume-container">
                 <Header {...cv.basics} />
                 <About summary={cv.basics.summary} />
-                <Contact email={cv.basics.email} phone={cv.basics.phone} url={cv.basics.url} />
+                <Contact email={cv.basics.email} phone={cv.basics.phone} website={cv.basics.website} />
                 <Profiles profiles={cv.basics.profiles} />
                 <Education education={cv.education} />
                 <Work work={cv.work} />
@@ -52,7 +52,7 @@ export const query = graphql`
                 image
                 summary
                 email
-                url
+                website
                 phone
                 profiles {
                     network
@@ -62,10 +62,10 @@ export const query = graphql`
                 }
             }
             work {
-                name
+                company
                 location
                 position
-                url
+                website
                 startDate
                 endDate
                 summary
@@ -75,8 +75,8 @@ export const query = graphql`
             education {
                 institution
                 score
-                area
-                url
+                title
+                website
                 startDate
                 endDate
                 studyType

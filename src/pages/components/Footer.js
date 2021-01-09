@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import GatsbyImg from '../../resources/Gatsby-Logo.svg';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
+import { version } from '../../utils/consts'
 
 const Footer = ({ commit }) => {
     return (
@@ -14,6 +15,12 @@ const Footer = ({ commit }) => {
 
 const Version = ({ commit }) => {
     var date = moment().format('YYYY-MM-DD');
+
+    if (isUndefinedOrEmpty(commit)) {
+        // dirty fallback, only synced if PDF is generated before build
+        commit = version + " ";
+    }
+
     return (
         <section>
             <div className='footerItem'>Version: &nbsp;{date}-{commit.substring(0, 7)}</div>
@@ -27,7 +34,7 @@ const FooterItem = ({ img, text }) => {
         <section>
             <div className="footerItem" id="footerPowered">
                 {text}
-                {hasImg ? <img src={img} /> : null}
+                {hasImg ? <img src={img} alt='gatsby logo' /> : null}
             </div>
         </section>
     )

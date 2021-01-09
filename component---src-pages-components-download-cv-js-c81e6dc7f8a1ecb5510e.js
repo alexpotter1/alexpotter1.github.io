@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"/3Zf":function(n,a,e){"use strict";e.r(a);var t=e("q1tI"),o=e.n(t),f=e("BmFx"),c=e.n(f);a.default=function(){return o.a.createElement("a",{className:"cv-link",href:c.a,download:!0},"Download CV")}},BmFx:function(n,a,e){n.exports=e.p+"static/resume-9b488e3abb83a65b825a265f13f73fdf.pdf"}}]);
+//# sourceMappingURL=component---src-pages-components-download-cv-js-c81e6dc7f8a1ecb5510e.js.map

@@ -89,6 +89,35 @@
       "startDate": "2016-09-27",
       "endDate": "2020-05-31",
       "score": "1st"
+    },
+    {
+      "institution": "Queen Mary's Grammar School",
+      "icon": "https://upload.wikimedia.org/wikipedia/en/9/99/QMGlogofullsize.jpg",
+      "website": "https://qmgs.walsall.sch.uk",
+      "title": "Sixth Form",
+      "studyType": "A/AS level",
+      "startDate": "2014-09-05",
+      "endDate": "2016-06-10",
+      "score": "",
+      "courses": [
+        "A level Computing - A",
+        "A level Mathematics - B",
+        "A level Physics - C",
+        "AS level English Language & Literature - B"
+      ]
+    },
+    {
+      "institution": "Cannock Chase High School",
+      "icon": "https://pbs.twimg.com/profile_images/700392447289991168/_dRuNr4D_400x400.png",
+      "website": "https://cannockchasehigh.com",
+      "title": "Secondary School",
+      "studyType": "GCSE",
+      "startDate": "2009-09-05",
+      "endDate": "2014-06-10",
+      "score": "",
+      "courses": [
+        "6 A*s, 3As, 2Bs including English and Maths"
+      ]
     }
   ],
   "awards": [

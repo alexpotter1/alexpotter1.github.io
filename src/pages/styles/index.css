@@ -285,6 +285,10 @@
   .Collapsible__trigger .is-open {
     opacity: 50%;
   }
+
+  .Collapsible__contentInner > article {
+    margin-bottom: 1.5em;
+  }
   
   @media print, (min-width: 48em) {
     h3 {

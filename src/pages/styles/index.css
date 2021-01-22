@@ -273,6 +273,18 @@
   .footerItem > img {
     width: 100px;
   }
+
+  .Collapsible__trigger {
+    color: var(--linkColor);
+    font-weight: bold;
+    font-size: larger;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  .Collapsible__trigger .is-open {
+    opacity: 50%;
+  }
   
   @media print, (min-width: 48em) {
     h3 {

@@ -1,22 +1,50 @@
 import React from 'react';
+import Collapsible from 'react-collapsible';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
-import { timeFormat } from '../../utils/consts';
+import { timeFormat, maxPriorityGroups } from '../../utils/consts';
 import moment from 'moment';
 
 const Work = ({work}) => {
+    let lotsOfWork = false;
+    let priorityWork = [];
+
     if (work?.length === 0 || work?.length === undefined) {
         return null;
+    }
+
+    if (work.length > maxPriorityGroups) {
+        lotsOfWork = true;
+        for (var i = 0; i < maxPriorityGroups; i++) {
+            priorityWork.push(work.shift())
+        }
     }
 
     return (
         <section id="work">
             <h3>Work</h3>
             <div className="stack">
-                {work.map((w) => (
-                    <WorkItem key={w.name} {...w} />
-                ))}
+                {lotsOfWork ? 
+                (<LotsOfWorkWithCollapse priority={priorityWork} rest={work} />) 
+                : (work.map((w) => (
+                    <WorkItem key={w.startDate} {...w} />
+                )))}
             </div>
         </section>
+    )
+}
+
+const LotsOfWorkWithCollapse = ({priority, rest}) => {
+    return (
+        <>
+            {priority.map((w) => (
+                <WorkItem key={w.startDate} {...w} />
+            ))}
+            <Collapsible trigger="More..." triggerWhenOpen="Less...">
+                {rest.map((w) => (
+                    <WorkItem key={w.startDate} {...w} />
+                ))}
+            </Collapsible>
+        </>
     )
 }
 

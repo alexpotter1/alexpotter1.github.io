@@ -1,22 +1,50 @@
 import React from 'react';
+import Collapsible from 'react-collapsible';
 import isUndefinedOrEmpty from '../../utils/isUndefinedOrEmpty';
-import { timeFormat } from '../../utils/consts';
+import { timeFormat, maxPriorityGroups } from '../../utils/consts';
 import moment from 'moment';
 
 const Education = ({education}) => {
+    let lotsOfEducation = false;
+    let priorityEducation = [];
+
     if (education?.length === 0 || education?.length === undefined) {
         return null;
+    }
+
+    if (education.length > maxPriorityGroups) {
+        lotsOfEducation = true;
+        for (var i = 0; i < maxPriorityGroups; i++) {
+            priorityEducation.push(education.shift())
+        }
     }
 
     return (
         <section id="education">
             <h3>Education</h3>
             <div className="stack">
-                {education.map((w) => (
+                {lotsOfEducation ? 
+                (<LotsOfEducationWithCollapse priority={priorityEducation} rest={education} />) 
+                : (education.map((w) => (
                     <EducationItem key={w.startDate} {...w} />
-                ))}
+                )))}
             </div>
         </section>
+    )
+}
+
+const LotsOfEducationWithCollapse = ({priority, rest}) => {
+    return (
+        <>
+            {priority.map((w) => (
+                <EducationItem key={w.startDate} {...w} />
+            ))}
+            <Collapsible trigger="More..." triggerWhenOpen="Less...">
+                {rest.map((w) => (
+                    <EducationItem key={w.startDate} {...w} />
+                ))}
+            </Collapsible>
+        </>
     )
 }
 

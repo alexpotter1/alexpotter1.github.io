@@ -77,7 +77,11 @@
         "COMM058 - Architectural Thinking for Security",
         "COMM044 - Symmetric Cryptography",
         "COMM045 - Asymmetric Cryptography",
-        "COMM037 - Information Security Management" 
+        "COMM037 - Information Security Management",
+        "COMM048 - Information and Network Security",
+        "COMM034 - Cloud Computing (AWS/GCP)",
+        "COMM047 - Secure Systems and Applications",
+        "COMM046 - Multimedia Security and Digital Forensics"
       ]
     },
     {
@@ -121,6 +125,11 @@
     }
   ],
   "awards": [
+    {
+      "title": "The IBM Prize for Best Final Year Performance",
+      "date": "2020-10-14",
+      "awarder": "University of Surrey, IBM"
+    },
     {
       "title": "British Informatics Olympiad - First Round",
       "date": "2015-03-01",
@@ -202,14 +211,15 @@
       "keywords": [
         "Running",
         "Cycling",
-        "Gym"
+        "Gym",
+        "Nutritional Science"
       ]
     },
     {
       "name": "Music",
       "keywords": [
         "Electronic",
-        "Ableton"
+        "Music Production"
       ]
     }
   ],

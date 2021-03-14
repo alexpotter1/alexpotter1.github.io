@@ -8,6 +8,7 @@ import Profiles from './components/Profiles';
 import Work from './components/Work';
 import Volunteer from './components/Volunteer';
 import Education from './components/Education';
+import Awards from './components/Awards';
 import Publications from './components/Publications'
 import Skills from './components/Skills';
 import Languages from './components/Languages';
@@ -34,8 +35,9 @@ const CV = ({ data }) => {
                 <Education education={cv.education} />
                 <Work work={cv.work} />
                 <Volunteer volunteer={cv.volunteer} />
+                <Awards awards={cv.awards} />
                 <Publications publications={cv.publications} />
-                <Skills skills={cv.skills} />   
+                <Skills skills={cv.skills} />
                 <Languages languages={cv.languages} />
                 <Interests interests={cv.interests} />
                 <Footer commit={git.hash} />
@@ -88,6 +90,11 @@ export const query = graphql`
                 studyType
                 courses
                 icon
+            }
+            awards {
+                title
+                date
+                awarder
             }
             publications {
                 name
